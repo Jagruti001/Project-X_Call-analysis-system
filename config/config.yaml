@@ -1,0 +1,50 @@
+# Call Analysis System Configuration
+
+# Whisper Settings
+whisper:
+  model_size: "base"  # tiny, base, small, medium, large
+  language: "en"
+  device: "cpu"  # cpu or cuda
+
+# LLM Settings (Ollama)
+llm:
+  base_url: "http://localhost:11434"
+  model: "qwen2.5:3b"
+  temperature: 0.3
+  max_tokens: 2048
+
+# Embeddings
+embeddings:
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+
+# ChromaDB
+chromadb:
+  persist_directory: "./data/chromadb"
+  collection_name: "call_issues"
+
+# Clustering
+clustering:
+  algorithm: "hdbscan"
+  min_cluster_size: 3
+  min_samples: 2
+  metric: "cosine"
+  
+# Storage
+storage:
+  transcripts_dir: "./data/transcripts"
+  analysis_dir: "./data/analysis"
+  audio_dir: "./data/audio"
+
+# Batch Processing
+batch:
+  size: 10
+  
+# Evaluation
+evaluation:
+  sample_size: 20
+  target_accuracy:
+    speaker_labeling: 0.80
+    sentiment: 0.75
+    issue_extraction: 0.85
+    clustering_silhouette: 0.30
