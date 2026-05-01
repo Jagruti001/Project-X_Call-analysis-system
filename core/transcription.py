@@ -1,4 +1,4 @@
-"""Production-grade audio transcription using OpenAI Whisper."""
+"""audio transcription using OpenAI Whisper."""
 
 import whisper
 import torch
@@ -44,8 +44,6 @@ def retry_on_failure(max_attempts: int = 3, delay: float = 2.0):
 
 class TranscriptionEngine:
     """
-    Production-grade audio transcription using Whisper.
-    
     Features:
     - Multiple model sizes (tiny to large)
     - GPU/CPU support with automatic detection
