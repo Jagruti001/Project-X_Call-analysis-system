@@ -4,9 +4,6 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
-venv/
-ENV/
 build/
 develop-eggs/
 dist/
@@ -23,22 +20,10 @@ wheels/
 .installed.cfg
 *.egg
 
-# Data directories
-data/audio/*
-data/transcripts/*
-data/analysis/*
-data/chromadb/*
-!data/audio/.gitkeep
-!data/transcripts/.gitkeep
-!data/analysis/.gitkeep
-!data/chromadb/.gitkeep
-
-# Logs
-logs/
-*.log
-
-# Streamlit
-.streamlit/
+# Virtual Environment
+venv/
+ENV/
+env/
 
 # IDE
 .vscode/
@@ -47,18 +32,35 @@ logs/
 *.swo
 *~
 
+# Data
+data/audio/*
+!data/audio/.gitkeep
+data/transcripts/*
+!data/transcripts/.gitkeep
+data/analysis/*
+!data/analysis/.gitkeep
+data/chromadb/*
+!data/chromadb/.gitkeep
+
+# Logs
+*.log
+logs/
+
 # OS
 .DS_Store
 Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Environment variables
+.env
+.env.local
 
 # Jupyter
 .ipynb_checkpoints/
 *.ipynb
 
-# Evaluation
-evaluation_report.json
-insights_output.json
-
 # Model cache
-.cache/
 models/
+.cache/
